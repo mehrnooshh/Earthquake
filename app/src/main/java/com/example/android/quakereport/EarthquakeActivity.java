@@ -36,6 +36,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.earthquake_activity);
 
         // Create a fake list of earthquake locations.
+        // We have used getTime method to get date type from Gregorian Calender
         List<Earthquake> earthquakes = new ArrayList<>();
         earthquakes.add(new Earthquake(7.2f, "San Francisco", new GregorianCalendar(2016, Calendar.FEBRUARY, 2).getTime()));
         earthquakes.add(new Earthquake(6.1f, "London", new GregorianCalendar(2015, Calendar.JULY, 20).getTime()));
@@ -53,7 +54,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
 
         // Create a new {@link ArrayAdapter} of earthquakes
-        ArrayAdapter<Earthquake> adapter = new EventsAdapter(
+        ArrayAdapter<Earthquake> adapter = new EarthquakeAdapter(
                 this, android.R.layout.simple_list_item_1, earthquakes);
 
         // Set the adapter on the {@link ListView}
