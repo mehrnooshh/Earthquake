@@ -65,7 +65,6 @@ public final class QueryUtils {
                 Earthquake earthquake = new Earthquake(magnitude, location, time);
                 earthquakes.add(earthquake);
 
-
             }
 
         } catch (JSONException e) {
