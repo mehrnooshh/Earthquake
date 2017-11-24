@@ -34,7 +34,6 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
                     R.layout.earthquake_list_item, parent, false);
         }
 
-
         // Find the earthquake at the given position in the list of earthquakes
         final Earthquake currentEarthquake = getItem(position);
 
