@@ -22,11 +22,11 @@ public class Earthquake {
         return mMagnitude;
     }
 
-    public long getmDate() {
+    public long getDate() {
         return mDate;
     }
 
-    public String getmLocation() {
+    public String getLocation() {
         return mLocation;
     }
 

@@ -57,7 +57,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
 
         // Find the TextView with view ID location and Display the location of the current earthquake in that TextView
-        String originalLocation = currentEarthquake.getmLocation();
+        String originalLocation = currentEarthquake.getLocation();
         String primaryLocation;
         String locationOffset;
         if (originalLocation.contains(LOCATION_SEPARATOR)) {
@@ -76,7 +76,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
 
         // Create a new Date object from the time in milliseconds of the earthquake
-        Date dateObject = new Date(currentEarthquake.getmDate());
+        Date dateObject = new Date(currentEarthquake.getDate());
 
         // Find the TextView with view ID date
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
@@ -85,7 +85,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
         dateTextView.setText(dateFormat.format(dateObject));
       // We could also do this
-      // dateTextView.setText(dateFormat.format(currentEarthquake.getmDate()));
+      // dateTextView.setText(dateFormat.format(currentEarthquake.getDate()));
 
         // Find the TextView with view ID time
         TextView timeTextView = (TextView) listItemView.findViewById(R.id.time);
